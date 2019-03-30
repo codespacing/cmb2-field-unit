@@ -34,6 +34,17 @@ function cmb2_unit_metabox() {
 }
 ```
 
+## Return values
+
+<pre>
+Array
+(
+    [value] => 4
+    [unit] => em
+    [all] => 4em
+)
+</pre>
+
 ## Retrieve the field value
 
 ```php
@@ -43,6 +54,13 @@ function cmb2_unit_metabox() {
     $unit = isset( $post_meta['unit'] ) ? $post_meta['unit'] : 'px';
     
     echo 'font-size: ' . $value . $unit . ';';
+    
+    /**
+     * OR */
+     
+    $all = isset( $post_meta['all'] ) ? $post_meta['all'] : '0px';
+    
+    echo 'font-size: ' . $all . ';';
 ```
 
 ## Changelog
