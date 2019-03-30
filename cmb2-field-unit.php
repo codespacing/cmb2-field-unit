@@ -74,7 +74,7 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                     }
 		    		   			    
 		    echo $field_type->select( array(
-				'name'    => $field_type->_name() . '[unit]',
+			'name'    => $field_type->_name() . '[unit]',
 			'desc'    => '',
 			'id'      => $field_type->_id() . '_unit',
 			'class' => 'cmb2-unit-select',
