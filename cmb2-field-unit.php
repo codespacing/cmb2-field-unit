@@ -82,16 +82,16 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                     ?>
                 </div>
 				
-				<?php 
-				echo $field_type->input( array(
-					'name' => $field_type->_name() . '[all]',
-					'desc' => '',
-					'id' => $field_type->_id(),
-					'type' => 'hidden',
-					'value' => ( isset( $value['all'] ) ) ? $value['all'] : '' ,
-					'data-field-id' => $field_type->_name(),
-				) ); 
-				?>
+		<?php 
+		echo $field_type->input( array(
+			'name' => $field_type->_name() . '[all]',
+			'desc' => '',
+			'id' => $field_type->_id(),
+			'type' => 'hidden',
+			'value' => ( isset( $value['all'] ) ) ? $value['all'] : '' ,
+			'data-field-id' => $field_type->_name(),
+		) ); 
+		?>
 	
             </div>
 
