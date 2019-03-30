@@ -28,7 +28,9 @@ function cmb2_unit_metabox() {
 		'units'     => array(
 			'px' => 'px',
 			'em' => 'em',
-		)
+		),
+		'min' => 1,
+		'max' => 9,
 	) );
 
 }
