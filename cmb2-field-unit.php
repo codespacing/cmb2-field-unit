@@ -55,6 +55,7 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                         'type'    => 'number',
                         'pattern' => '\d*',
                         'value' => ( ( isset( $value['value'] ) ) ? $value['value'] : '' ),
+                        'data-field-id' => $field_type->_name(),
                     ) ); ?>
                 </div>
 
@@ -76,10 +77,22 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                         'id'      => $field_type->_id() . '_unit',
                         'class' => 'cmb2-unit-select',
                         'options' => $this->build_options_string( $field_type, $unit_options, ( ( isset( $value['unit'] ) ) ? $value['unit'] : '' ) ),
+                        'data-field-id' => $field_type->_name(),
                     ) );
                     ?>
                 </div>
-
+				
+				<?php 
+				echo $field_type->input( array(
+					'name' => $field_type->_name() . '[all]',
+					'desc' => '',
+					'id' => $field_type->_id(),
+					'type' => 'hidden',
+					'value' => ( isset( $value['all'] ) ) ? $value['all'] : '' ,
+					'data-field-id' => $field_type->_name(),
+				) ); 
+				?>
+	
             </div>
 
             <?php
