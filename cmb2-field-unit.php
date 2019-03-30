@@ -72,17 +72,15 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                     if( is_array( $field->args( 'units' ) ) ) {
                         $unit_options = $field->args( 'units' );
                     }
-		    
-		    if(count($unit_options) > 1){			    
-                    	echo $field_type->select( array(
-                        		'name'    => $field_type->_name() . '[unit]',
-                        	'desc'    => '',
-                        	'id'      => $field_type->_id() . '_unit',
-                        	'class' => 'cmb2-unit-select',
-                        	'options' => $this->build_options_string( $field_type, $unit_options, ( ( isset( $value['unit'] ) ) ? $value['unit'] : '' ) ),
-                        	'data-field-id' => $field_type->_name(),
-                    	) );			    
-		    }else echo array_shift($unit_options);
+		    		   			    
+		    echo $field_type->select( array(
+				'name'    => $field_type->_name() . '[unit]',
+			'desc'    => '',
+			'id'      => $field_type->_id() . '_unit',
+			'class' => 'cmb2-unit-select',
+			'options' => $this->build_options_string( $field_type, $unit_options, ( ( isset( $value['unit'] ) ) ? $value['unit'] : '' ) ),
+			'data-field-id' => $field_type->_name(),
+		    ) );			    		    
                     ?>
                 </div>
 				
