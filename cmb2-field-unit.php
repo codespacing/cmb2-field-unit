@@ -54,6 +54,8 @@ if( !class_exists( 'CMB2_Field_Unit' ) ) {
                         'class' => 'cmb2-text-small cmb2-unit-input',
                         'type'    => 'number',
                         'pattern' => '\d*',
+		    	'min' => $field->args( 'min' ),
+		    	'max' => $field->args( 'max' ),
                         'value' => ( ( isset( $value['value'] ) ) ? $value['value'] : '' ),
                         'data-field-id' => $field_type->_name(),
                     ) ); ?>
