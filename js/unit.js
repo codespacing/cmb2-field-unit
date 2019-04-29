@@ -8,8 +8,10 @@
 		var field_value = $('input.cmb2-unit-input[data-field-id="' + field_id + '"]').val();
 		var field_unit = $('select.cmb2-unit-select[data-field-id="' + field_id + '"]').val();	
 		
-		$('input[type=hidden][data-field-id="' + field_id + '"]').val(field_value + field_unit);	
-			
+		if(field_value !== ''){
+			$('input[type=hidden][data-field-id="' + field_id + '"]').val(field_value + field_unit);	
+		}else $('input[type=hidden][data-field-id="' + field_id + '"]').val('');
+				
 	};
 	
 	$('select.cmb2-unit-select').on('change', function(){
